@@ -16,8 +16,8 @@ class Program
         job2._startYear = 2010;
         job2._endYear = 2014;
 
-        Console.WriteLine($"{job1._company}");
-        Console.WriteLine($"{job2._company}");
+        job1.Display();
+        job2.Display();
 
         
     }

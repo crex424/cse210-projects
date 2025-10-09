@@ -6,7 +6,7 @@ public class GeneratePrompt
     public string GetPrompt()
     {
         Random rand = new Random();
-        int random_num = rand.Next(6);
+        int random_num = rand.Next(5);
         return _prompts[random_num];
     }
 

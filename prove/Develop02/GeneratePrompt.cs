@@ -3,11 +3,11 @@ public class GeneratePrompt
 {
     public List<string> _prompts = new List<string>();
 
-    public string GetPrompt(List<string> prompts)
+    public string GetPrompt()
     {
         Random rand = new Random();
         int random_num = rand.Next(6);
-        return prompts[random_num];
+        return _prompts[random_num];
     }
 
     public void Display()

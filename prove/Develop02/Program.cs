@@ -14,61 +14,54 @@ class Program
         prompts._prompts.Add("How would I improve my day next time?");
 
         bool finish = false;
-        int user_choice = GetUserInput();
-        // while (finish == false)
-        // {
-        //     DisplayMenu();
-        //     int user_choice = GetUserInput();
-        //     switch (user_choice)
-        //     {
-        //         case 1:
-        //             Entry entry = WriteEntry(prompts);
-        //             journal.AddEntry(entry);
-        //             break;
-        //         case 2:
-        //             journal.DisplayJournal();
-        //             break;
-        //         case 3:
-        //             journal.LoadJournal();
-        //             break;
-        //         case 4:
-        //             journal.SaveJournal();
-        //             break;
-        //         case 5:
-        //             finish = true;
-        //             break;
-        //     }
-        // }
+        while (finish == false)
+        {
+            DisplayMenu();
+            int user_choice = GetUserInput();
+            switch (user_choice)
+            {
+                case 1:
+                    Entry entry = WriteEntry(prompts);
+                    journal.AddEntry(entry);
+                    break;
+                case 2:
+                    journal.DisplayJournal();
+                    break;
+                case 3:
+                    journal = journal.LoadJournal();
+                    break;
+                case 4:
+                    journal.SaveJournal();
+                    break;
+                case 5:
+                    finish = true;
+                    break;
+                default:
+                    Console.WriteLine("Please choose a number option from the menu!");
+                    break;
+            }
+        }
 
 
 
 
     }
-    // public static void DisplayMenu()
-    // {
-    //     Console.WriteLine("Please select one of the following choices:");
-    //     Console.WriteLine("1. Write");
-    //     Console.WriteLine("2. Display");
-    //     Console.WriteLine("3. Load");
-    //     Console.WriteLine("4. Save");
-    //     Console.WriteLine("5. Quit");
-    // }
+    public static void DisplayMenu()
+    {
+        Console.WriteLine("Please select one of the following choices:");
+        Console.WriteLine("1. Write");
+        Console.WriteLine("2. Display");
+        Console.WriteLine("3. Load");
+        Console.WriteLine("4. Save");
+        Console.WriteLine("5. Quit");
+    }
 
     public static int GetUserInput()
     {
-        int user_choice = 0;
-        bool is_correct = false;
-        while (is_correct == false)
-            Console.Write("What would you like to do? ");
-            try
-            {
-                user_choice = int.Parse(Console.ReadLine());
-                is_correct = true;
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Please enter a number!");
-            }
+
+        Console.Write("What would you like to do? ");
+        int user_choice = int.Parse(Console.ReadLine());
+
         return user_choice;
 
     }

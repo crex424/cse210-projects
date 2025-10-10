@@ -8,9 +8,9 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"{_date}");
-        Console.WriteLine($"{_prompt}");
+        Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
         Console.WriteLine($"{_entry}");
+        Console.WriteLine("");
     }
 
     public string GetDate()
@@ -18,13 +18,5 @@ public class Entry
         DateTime current_date = DateTime.Now;
         string formatted_date = current_date.ToString("MM/dd/yyyy");
         return formatted_date;
-    }
-    public Entry CreateEntry(string text, string prompt)
-    {
-        Entry entry = new Entry();
-        entry._date = GetDate();
-        entry._entry = text;
-        entry._prompt = prompt;
-        return entry;
     }
 }

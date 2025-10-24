@@ -1,7 +1,7 @@
 public class Scripture
 {
     private Reference _reference;
-    private string _text;
+    private List<Word> _words;
 
     public Scripture()
     {
@@ -15,7 +15,7 @@ public class Scripture
 
     public static void HideWords()
     {
-
+        
     }
 
     public static bool IsCompletelyHidden()

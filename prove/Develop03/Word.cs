@@ -6,24 +6,30 @@ public class Word
     {
         this._word = word;
     }
-
-    public static void Hide(string word)
+    public void Hide()
     {
-
+        string blank_space = "";
+        for (int i = 0; i < _word.Count(); i++)
+            blank_space += "_";
+        _word = blank_space;
     }
 
-    public static void Show(string word)
+    public void Show()
     {
-
+        
     }
 
-    public static bool IsHidden(string word)
+    public bool IsHidden()
     {
-        return true;
+        if (_word.Contains("_")) 
+        {
+            return true;
+        }
+        return false;
     }
 
-    public static string GetRenderedText()
+    public string GetRenderedWord()
     {
-        return "test";
+        return $"{_word} ";
     }
 }

@@ -24,11 +24,11 @@ public class Reference
 
     public string GetScripture()
     {
-        string scripture_text = $"{_book} {_chapter}:{_verse}";
+        string scripture_reference = $"{_book} {_chapter}:{_verse}";
         if (_endVerse > 0)
         {
-            scripture_text += $"-{_endVerse}";
+            scripture_reference += $"-{_endVerse}";
         }
-        return scripture_text;
+        return scripture_reference;
     }
 }

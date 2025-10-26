@@ -81,7 +81,7 @@ public class Scripture
     {
         foreach (Word word in _words)
         {
-            if (!word.GetRenderedWord().Contains("_"))
+            if (!word.GetRenderedWord().Contains('_'))
             {
                 return false;
             }

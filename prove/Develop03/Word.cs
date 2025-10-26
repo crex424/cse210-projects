@@ -14,11 +14,6 @@ public class Word
         _word = blank_space;
     }
 
-    public void Show()
-    {
-        
-    }
-
     public bool IsHidden()
     {
         if (_word.Contains("_")) 

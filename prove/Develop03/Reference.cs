@@ -22,8 +22,13 @@ public class Reference
         this._endVerse = end_verse;
     }
 
-    public static string GetScripture()
+    public string GetScripture()
     {
-        return "test";
+        string scripture_text = $"{_book} {_chapter}:{_verse}";
+        if (_endVerse > 0)
+        {
+            scripture_text += $"-{_endVerse}";
+        }
+        return scripture_text;
     }
 }

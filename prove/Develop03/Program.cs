@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+    // Added the functionality to allow the user to choose how many words of the scripture verse are hidden. I think this is enough to gain the extra points.
     static void Main(string[] args)
     {
         string verse_text = "Yea, I make a record in the language of my father, which consists of the learning of the Jews and the language of the Egyptians.";

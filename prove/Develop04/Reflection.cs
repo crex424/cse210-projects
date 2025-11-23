@@ -16,7 +16,7 @@ public class Reflection : Activity
     public void DisplayQuestions(int index)
     {
             Console.Write(_questions[index]);
-            LoadingAnimation("dots");
+            LoadingAnimation("dots", 6);
         
     }
 

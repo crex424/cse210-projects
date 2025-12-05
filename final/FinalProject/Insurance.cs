@@ -5,6 +5,8 @@ public class Insurance
     private double _monthlyCost;
     private string _memberID;
 
+    private List<Customer> _customerInfo;
+
 
     public Insurance(string insuranceName, string insuranceDescription, double monthlyCost, string memberID)
     {

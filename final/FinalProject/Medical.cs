@@ -1,0 +1,24 @@
+public class Medical : Insurance
+{
+    private int _groupNumber;
+
+    public Medical(string insuranceName, string insuranceDescription, double monthlyCost, string memberID, int groupNumber) : base(insuranceName, insuranceDescription, monthlyCost, memberID)
+    {
+        this._groupNumber = groupNumber;
+    }
+
+    public override void DisplayInsurance()
+    {
+
+    }
+
+    public override void SaveToFile()
+    {
+
+    }
+
+    public override void LoadFromFile()
+    {
+        
+    }
+}

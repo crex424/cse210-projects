@@ -6,8 +6,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        
+        InsuranceStorage storage = new InsuranceStorage();
         int user_choice = 0;
         while (user_choice != 8)
+        {
             Console.WriteLine("In this program you will be able to view different types of insurances and their particular companies and see which people are currently enrolled in it.");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("    1: View Medical Insurance");
@@ -20,64 +23,73 @@ class Program
             Console.WriteLine("    8: quit");
             Console.Write("> ");
             user_choice = int.Parse(Console.ReadLine());
-
-        switch (user_choice)
-        {
-            case 1:
-                ViewMedical();
-                break;
-            case 2:
-                ViewDental();
-                break;
-            case 3:
-                ViewVision();
-                break;
-            case 4:
-                ViewLife();
-                break;
-            case 5:
-                ViewHousing();
-                break;
-            case 6:
-                ViewRental();
-                break;
-            case 7:
-                ViewCar();
-                break;
-            case 8:
-                break;
+            switch (user_choice)
+            {
+                case 1:
+                    Console.Clear();
+                    ViewMedical(storage);
+                    break;
+                case 2:
+                    Console.Clear();
+                    ViewDental(storage);
+                    break;
+                case 3:
+                    Console.Clear();
+                    ViewVision(storage);
+                    break;
+                case 4:
+                    Console.Clear();
+                    ViewLife(storage);
+                    break;
+                case 5:
+                    Console.Clear();
+                    ViewHousing(storage);
+                    break;
+                case 6:
+                    Console.Clear();
+                    ViewRental(storage);
+                    break;
+                case 7:
+                    Console.Clear();
+                    ViewCar(storage);
+                    break;
+                case 8:
+                    Console.Clear();
+                    break;
+            }
         }
+           
     }
 
-    public static void ViewMedical()
+    public static void ViewMedical(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different medical insurances such as Blue Cross Blue Shield.");
+        storage.DisplayMedicalList();
     }
 
-    public static void ViewDental()
+    public static void ViewDental(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different dental insurances such as Blue Cross Blue Shield.");
+        storage.DisplayDentalList();
     }
 
-    public static void ViewVision()
+    public static void ViewVision(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different vision insurances such as Blue Cross Blue Shield.");
+        storage.DisplayVisionList();
     }
 
-    public static void ViewLife()
+    public static void ViewLife(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different life insurances such as Blue Cross Blue Shield.");
+        storage.DisplayLifeList();
     }
-    public static void ViewHousing()
+    public static void ViewHousing(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different housing insurances such as Blue Cross Blue Shield.");
+        storage.DisplayHousingList();
     }
-    public static void ViewRental()
+    public static void ViewRental(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different rental insurances such as Blue Cross Blue Shield.");
+        storage.DisplayRentalList();
     }
-    public static void ViewCar()
+    public static void ViewCar(InsuranceStorage storage)
     {
-        Console.WriteLine("pretend there is a list of different car insurances such as Blue Cross Blue Shield.");
+        storage.DisplayCarList();
     }
 }

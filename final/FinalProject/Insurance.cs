@@ -1,24 +1,36 @@
+using System.Net;
+
 public class Insurance
 {
     private string _insuranceName;
     private string _insuranceDescription;
     private double _monthlyCost;
-    private string _memberID;
 
-    private List<Customer> _customerInfo;
-
-
-    public Insurance(string insuranceName, string insuranceDescription, double monthlyCost, string memberID)
+    public Insurance(string insuranceName, string insuranceDescription, double monthlyCost)
     {
         this._insuranceName = insuranceName;
         this._insuranceDescription = insuranceDescription;
         this._monthlyCost = monthlyCost;
-        this._memberID = memberID;
     }
 
     public virtual void DisplayInsurance()
     {
+        Console.WriteLine($"{_insuranceName} {_insuranceDescription} {_monthlyCost}");
+    }
 
+    public string GetName()
+    {
+        return _insuranceName;
+    }
+
+    public string GetDescription()
+    {
+        return _insuranceDescription;
+    }
+
+    public double GetMonthlyCost()
+    {
+        return _monthlyCost;
     }
 
     public virtual void SaveToFile()

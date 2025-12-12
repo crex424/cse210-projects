@@ -1,10 +1,9 @@
 public class Rental : Insurance
 {
-    private int _policyNumber;
+    
 
-    public Rental(string insuranceName, string insuranceDescription, double monthlyCost, string memberID, int groupNumber, int policyNumber) : base(insuranceName, insuranceDescription, monthlyCost, memberID)
+    public Rental(string insuranceName, string insuranceDescription, double monthlyCost) : base(insuranceName, insuranceDescription, monthlyCost)
     {
-        this._policyNumber = policyNumber;
     }
 
     public override void DisplayInsurance()

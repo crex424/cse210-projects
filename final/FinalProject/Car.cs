@@ -1,17 +1,19 @@
 public class Car : Insurance
 {
     private List<string> _coverage;
-    private string _model;
 
-    public Car(string insuranceName, string insuranceDescription, double monthlyCost, string memberID, int groupNumber, List<string> coverage, string model) : base(insuranceName, insuranceDescription, monthlyCost, memberID)
+    public Car(string insuranceName, string insuranceDescription, double monthlyCost, List<string> coverage) : base(insuranceName, insuranceDescription, monthlyCost)
     {
         this._coverage = coverage;
-        this._model = model;
     }
 
     public override void DisplayInsurance()
     {
-
+        Console.WriteLine($"{GetName()} {GetDescription()} Cost Per Month:{GetMonthlyCost()} coverage:");
+        foreach (string coverage in _coverage)
+        {
+            Console.WriteLine($"   {coverage}");
+        }
     }
 
     public override void SaveToFile()

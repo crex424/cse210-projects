@@ -1,12 +1,12 @@
 public class EternalGoal : Goal
 {
-    public EternalGoal(string goalName, int totalPoints, int pointsOnCompletion, bool isCompleted) : base(goalName, totalPoints, pointsOnCompletion, isCompleted)
+    public EternalGoal(string goalName, string description, int pointsOnCompletion, bool isCompleted) : base(goalName, description, pointsOnCompletion, isCompleted)
     {
-
+        
     }
 
     public override void RecordEvent()
     {
-        
+        AccumulatePoints();
     }
 }

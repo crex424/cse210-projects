@@ -15,7 +15,7 @@ public class Insurance
 
     public virtual void DisplayInsurance()
     {
-        Console.WriteLine($"{_insuranceName} {_insuranceDescription} {_monthlyCost}");
+        Console.WriteLine($"{_insuranceName}| Description: {_insuranceDescription}| Cost Per Month: {_monthlyCost}");
     }
 
     public string GetName()
@@ -31,15 +31,5 @@ public class Insurance
     public double GetMonthlyCost()
     {
         return _monthlyCost;
-    }
-
-    public virtual void SaveToFile()
-    {
-
-    }
-
-    public virtual void LoadFromFile()
-    {
-        
     }
 }

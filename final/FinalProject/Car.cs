@@ -9,20 +9,10 @@ public class Car : Insurance
 
     public override void DisplayInsurance()
     {
-        Console.WriteLine($"{GetName()} {GetDescription()} Cost Per Month:{GetMonthlyCost()} coverage:");
+        Console.WriteLine($"{GetName()} Description: {GetDescription()} Cost Per Month: {GetMonthlyCost()} coverage:");
         foreach (string coverage in _coverage)
         {
             Console.WriteLine($"   {coverage}");
         }
-    }
-
-    public override void SaveToFile()
-    {
-
-    }
-
-    public override void LoadFromFile()
-    {
-        
     }
 }

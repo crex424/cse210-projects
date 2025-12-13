@@ -5,13 +5,4 @@ public class Dental : Insurance
     {
 
     }
-    public override void SaveToFile()
-    {
-
-    }
-
-    public override void LoadFromFile()
-    {
-        
-    }
 }

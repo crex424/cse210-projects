@@ -5,14 +5,4 @@ public class Vision : Insurance
     {
 
     }
-
-    public override void SaveToFile()
-    {
-
-    }
-
-    public override void LoadFromFile()
-    {
-        
-    }
 }

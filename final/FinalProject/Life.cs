@@ -10,21 +10,11 @@ public class Life : Insurance
     }
     public override void DisplayInsurance()
     {
-        Console.WriteLine($"{GetName()} {GetDescription()} Cost Per Month:{GetMonthlyCost()} payout: ${_payout} coverage:");
+        Console.WriteLine($"{GetName()}| Description: {GetDescription()}| Cost Per Month:{GetMonthlyCost()}| payout: ${_payout}| coverage:");
         foreach (string coverage in _coverage)
         {
             Console.WriteLine($"   {coverage}");
         }
-    }
-
-    public override void SaveToFile()
-    {
-
-    }
-
-    public override void LoadFromFile()
-    {
-        
     }
     
 }

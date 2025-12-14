@@ -41,7 +41,7 @@ class Program
         storage.AddRental(rent);
         storage.AddCar(car);
         int user_choice = 0;
-        while (user_choice != 9)
+        while (user_choice != 8)
         {
             Console.WriteLine("In this program you will be able to view different types of insurances and their particular companies and see which people are currently enrolled in it.");
             Console.WriteLine("Menu Options:");

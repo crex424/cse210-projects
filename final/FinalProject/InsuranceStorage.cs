@@ -53,6 +53,7 @@ public class InsuranceStorage
         foreach (Medical med in _medical)
         {
             med.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -61,6 +62,7 @@ public class InsuranceStorage
         foreach (Vision vis in _vision)
         {
             vis.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -69,6 +71,7 @@ public class InsuranceStorage
         foreach (Dental dent in _dental)
         {
             dent.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -77,6 +80,7 @@ public class InsuranceStorage
         foreach (Life life in _life)
         {
             life.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -85,6 +89,7 @@ public class InsuranceStorage
         foreach (Housing house in _housing)
         {
             house.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -93,6 +98,7 @@ public class InsuranceStorage
         foreach (Rental rent in _rental)
         {
             rent.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 
@@ -101,6 +107,7 @@ public class InsuranceStorage
         foreach (Car car in _car)
         {
             car.DisplayInsurance();
+            Console.WriteLine("===============");
         }
     }
 }

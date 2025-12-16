@@ -11,14 +11,12 @@ public class CheckListGoal : Goal
         this._completions = completions;
         this._bonusPoints = bonusPoints;
     }
-
     public override void RecordEvent()
     {
         _completions += 1;
         AccumulatePoints();
         if (_completions == _requiredCompletions)
         {
-
             AccumulatePoints(true, _bonusPoints);
         }
     }
@@ -26,10 +24,25 @@ public class CheckListGoal : Goal
     public override void DisplayGoalInfo()
     {
         string check_box = "[]";
-        if (IsComplete())
+        if (_completions == _requiredCompletions)
         {
             check_box = "[X]";
         }
-        Console.WriteLine($"{check_box} {GetGoalName()} ({GetDescription}) -- Currently completed: {_completions}/{_requiredCompletions}");
+        Console.WriteLine($"{check_box} {GetGoalName()} ({GetDescription()}) -- Currently completed: {_completions}/{_requiredCompletions}");
+    }
+
+    public int GetBonusPoints()
+    {
+        return _bonusPoints;
+    }
+
+    public int GetCompletions()
+    {
+        return _completions;
+    }
+
+    public int GetRequiredCompletions()
+    {
+        return _requiredCompletions;
     }
 }

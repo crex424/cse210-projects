@@ -1,9 +1,9 @@
 
-
 public class Goal
 {
     private string _goalName;
     private string _description;
+    private int _id;
     private int _totalPoints;
     private int _pointsOnCompletion;
     private bool _isCompleted;
@@ -19,11 +19,6 @@ public class Goal
     public bool IsComplete()
     {
         return _isCompleted;
-    }
-
-    public void SetTotalPoint(int total_points)
-    {
-        _totalPoints = total_points;
     }
 
     public string GetGoalName()
@@ -52,13 +47,28 @@ public class Goal
         {
             _totalPoints += _pointsOnCompletion + bonus_points;
         }
+        
 
     }
-    public void DisplayPoints()
+
+    public void SetID(int id)
     {
-        Console.WriteLine($"You have {_totalPoints} points.");
+        _id = id;
     }
 
+    public int GetID()
+    {
+        return _id;
+    }
+    public int GetPointOnCompletion()
+    {
+        return _pointsOnCompletion;
+    }
+    public int GetTotalPoints()
+    {
+        return _totalPoints;
+    }
+    
     public virtual void DisplayGoalInfo()
     {
         string check_box = "[]";

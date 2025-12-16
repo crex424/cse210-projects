@@ -21,6 +21,10 @@ public class Goal
         return _isCompleted;
     }
 
+    public void SetComplete(bool isCompleted)
+    {
+        _isCompleted = isCompleted;
+    }
     public string GetGoalName()
     {
         return _goalName;
@@ -33,8 +37,11 @@ public class Goal
 
     public virtual void RecordEvent()
     {
+        if (_isCompleted == false)
+        {
+            AccumulatePoints();
+        }
         _isCompleted = true;
-        AccumulatePoints();
     }
 
     public void AccumulatePoints(bool bonus = false, int bonus_points = 0)

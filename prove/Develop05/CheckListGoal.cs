@@ -13,12 +13,19 @@ public class CheckListGoal : Goal
     }
     public override void RecordEvent()
     {
-        _completions += 1;
-        AccumulatePoints();
-        if (_completions == _requiredCompletions)
-        {
-            AccumulatePoints(true, _bonusPoints);
-        }
+
+        if (IsComplete() != true || _completions != _requiredCompletions)
+            _completions += 1;
+            if (_completions == _requiredCompletions)
+            {
+                AccumulatePoints(true, _bonusPoints);
+                SetComplete(true);
+
+            }
+            else
+            {
+                AccumulatePoints();
+            }
     }
 
     public override void DisplayGoalInfo()
